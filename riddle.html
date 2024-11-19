@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: red;
+            color: black;
+        }
+        fieldset{
+            background-color: azure;
+            display: flex;
+            flex-direction: column;
+
+            
+        }
+        button{
+            border-radius: 20px;
+            padding: 5px;
+            width: 30%;
+            
+        }
+
+    </style>
+</head>
+<body>
+    
+    <fieldset>
+        <legend>
+            riddle app
+        </legend>
+        <div>Question 1</div>
+        <h1>what has keys but cant open locks</h1>
+        <input type="text" id="answer" placeholder="your answer">
+        &nbsp;&nbsp;&nbsp;<center><button onclick="check()">submit</button></center>
+        <p id="result"></p>
+        <details>
+            <summary>Hint</summary>
+                <p>this object is used tto type letters and numbers on a computer or phone</p>
+        </details>
+    </fieldset>
+    <script>
+        const answer = document.getElementById('answer');
+        const result = document.getElementById('result');
+        
+        function check(){
+            console.log(answer.value);
+            if(answer.value == 'Keyboard'){
+                result.innerHTML = `<b style="color:green">Correct answer</b>`;
+            }
+            else{
+                result.innerHTML = `<b style="color:red">Wrong answer</b>`;
+            }
+        }
+    </script>
+
+ 
+    
+</body>
+</html>
